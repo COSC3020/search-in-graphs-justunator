@@ -22,6 +22,8 @@ code, but you can base yours on test code from other exercises.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+The worse-case should be $\Theta(V + E)$. This is because in the worst case, the algorithm checks each vertex once but it will also end up checking every edge to find a path from the startnode to endnode. 
+
 ## Bonus
 
 Implement and analyze breadth-first search.
