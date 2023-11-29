@@ -1,1 +1,1 @@
-startNode != targetNode
+depthFirstSearch

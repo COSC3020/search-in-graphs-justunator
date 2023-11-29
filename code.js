@@ -1,6 +1,9 @@
 function depthFirstSearch(graph, startNode, targetNode) {
     if (startNode == targetNode){
-        return startNode
+        return [startNode]
+    }
+    else if(graph.length < 1){
+        return []
     }
     var visited =  Array.from({length: graph.length}, (e, i)=> false)
     var path = []
@@ -26,8 +29,12 @@ function depthFirstSearch(graph, startNode, targetNode) {
         }
         
     }
-
-    return path;
+    if(visited[targetNode]){
+        return path;
+    }
+    else{
+        return []
+    } 
 }
 
-//console.log(depthFirstSearch([[ 1, 4 ], [ 0, 2, 3, 4 ], [ 1, 3 ], [ 1, 2, 4 ], [ 0, 1, 3 ]], 0, 4)) // debug
+//console.log(depthFirstSearch([[ 1 ], [ 0, 2, 3 ], [ 1, 3 ], [ 1, 2 ], [ 0, 1, 3 ]], 0, 4)) // debug
