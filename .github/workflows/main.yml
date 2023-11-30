@@ -1,8 +1,5 @@
 on:
     push:
-
-permissions:
-    actions: write
     
 jobs:
     test:
